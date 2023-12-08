@@ -17,14 +17,14 @@ use std::io;
 // Inputs: name = Alice
 // Expected Outputs: Hello, Alice, nice to meet you!
 
-fn greet(name : &str) -> String {
-    return format!("Hello, {name}, nice to meet you!", name = name.trim());
-}
+// fn greet(name : &str) -> String {
+//     return format!("Hello, {name}, nice to meet you!", name = name.trim());
+// }
 
 fn main() -> io::Result<()> {
     let mut name = String::new();
     io::stdin().read_line(&mut name)?;
-    let greeting = greet(&name);
-    println!("{greeting}");
+    let trim: &str = name.trim();
+    println!("Hello, {trim}, nice to meet you!");
     Ok(())
 }
