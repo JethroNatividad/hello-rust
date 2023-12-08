@@ -24,7 +24,6 @@ use std::io;
 fn main() -> io::Result<()> {
     let mut name = String::new();
     io::stdin().read_line(&mut name)?;
-    let trim: &str = name.trim();
-    println!("Hello, {trim}, nice to meet you!");
+    println!("Hello, {}, nice to meet you!", name.trim());
     Ok(())
 }
